@@ -1,5 +1,5 @@
 resource "aws_instance" "ec2-a" {
-  count = 2
+  count = 2 #no. of instances
   ami = var.ami_id
   instance_type = var.instance_type
   vpc_security_group_ids = [var.sg_id]
