@@ -17,7 +17,7 @@ module "security_dev" {
 module "dev" {
     source = "./Computing"
     ami_id = "ami-0236922087fa98b6e"
-    instance_name = "ec201"
+    instance_name = "dev-app"
     instance_type = "t2.micro"
     subnet_id = module.network_dev.subnet_id
     sg_id = module.security_dev.sg_id
@@ -43,7 +43,7 @@ module "security_qa" {
 module "qa" {
     source = "./Computing"
     ami_id = "ami-0236922087fa98b6e"
-    instance_name = "ec202"
+    instance_name = "qa-app"
     instance_type = "t2.micro"
     subnet_id = module.network_qa.subnet_id
     sg_id = module.security_qa.sg_id
